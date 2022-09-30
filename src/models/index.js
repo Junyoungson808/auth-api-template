@@ -20,5 +20,5 @@ module.exports = {
   db: sequelize,
   food: new Collection(food),
   clothes: new Collection(clothes),
-  user
+  user,
 };
