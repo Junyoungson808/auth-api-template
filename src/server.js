@@ -13,7 +13,7 @@ const v1Routes = require('./routes/v1.js');
 const v2Routes = require('./routes/v2.js');
 
 const app = express();
-app.use(cors);
+app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(logger);

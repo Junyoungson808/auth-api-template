@@ -6,10 +6,10 @@ const foodModel = require('./food/model.js');
 const userModel = require('../auth/models/users');
 const Collection = require('./data-collection.js');
 
-// const DATABASE_URL = process.env.DATABASE_URL || 'sqlite:memory:';
+const DATABASE_URL = process.env.DATABASE_URL || 'sqlite:memory';
 
-const DATABASE_URL = 'sqlite::memory';
-let options = {logging: false};
+// const DATABASE_URL = 'sqlite::memory';
+// let options = {logging: false};
 const sequelize = new Sequelize(DATABASE_URL);
 const user = userModel(sequelize, DataTypes);
 const food = foodModel(sequelize, DataTypes);
